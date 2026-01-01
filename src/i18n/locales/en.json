@@ -1,0 +1,93 @@
+{
+  "common": {
+    "home": "Home",
+    "login": "Login",
+    "logout": "Logout",
+    "signup": "Sign Up",
+    "search": "Search",
+    "searchUsers": "Find Users",
+    "searchPlaceholder": "Search by name or role...",
+    "loading": "Loading...",
+    "loadMore": "Load More",
+    "noResults": "No results found",
+    "error": "An error occurred",
+    "save": "Save",
+    "cancel": "Cancel",
+    "edit": "Edit",
+    "delete": "Delete",
+    "confirm": "Confirm",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous"
+  },
+  "nav": {
+    "home": "HOME",
+    "about": "ABOUT",
+    "techSkills": "TECH SKILLS",
+    "project": "PROJECT",
+    "experience": "EXPERIENCE",
+    "career": "CAREER",
+    "education": "EDUCATION",
+    "blog": "BLOG",
+    "contact": "CONTACT"
+  },
+  "home": {
+    "title": "Portfolio Builder",
+    "subtitle": "Create a portfolio that tells your story",
+    "featuredUsers": "Featured Portfolios",
+    "recentUsers": "Recent Portfolios",
+    "viewProfile": "View Profile",
+    "createPortfolio": "Create Portfolio"
+  },
+  "profile": {
+    "title": "Profile",
+    "followers": "Followers",
+    "following": "Following",
+    "portfolio": "Portfolio",
+    "viewFullProfile": "View Full Profile"
+  },
+  "pageBuilder": {
+    "title": "Page Builder",
+    "addSection": "Add Section",
+    "editSection": "Edit Section",
+    "deleteSection": "Delete Section",
+    "layout": {
+      "fullWidth": "Full Width (1:1)",
+      "leftWide": "Left Wide (2:1)",
+      "rightWide": "Right Wide (1:2)",
+      "twoColumn": "Two Column (2:2)"
+    },
+    "contentTypes": {
+      "text": "Text",
+      "image": "Image",
+      "profile": "Profile",
+      "experience": "Experience",
+      "skills": "Skills",
+      "project": "Project",
+      "education": "Education",
+      "contact": "Contact",
+      "custom": "Custom"
+    }
+  },
+  "footer": {
+    "copyright": "© 2024 Portfolio Builder. All rights reserved.",
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy",
+    "contact": "Contact Us"
+  },
+  "auth": {
+    "loginTitle": "Login",
+    "signupTitle": "Sign Up",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "rememberMe": "Remember me",
+    "forgotPassword": "Forgot password?",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?",
+    "loginButton": "Login",
+    "signupButton": "Sign Up",
+    "socialLogin": "Social Login",
+    "or": "or"
+  }
+}

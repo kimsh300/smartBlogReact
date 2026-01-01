@@ -1,0 +1,273 @@
+/* ============================================
+   Home Page Styles
+   사용자 프로필 카드 그리드 & 무한스크롤
+   ============================================ */
+
+/* ============================================
+   Home Container
+   ============================================ */
+
+.home {
+  min-height: calc(100vh - var(--header-height) - var(--footer-height));
+  padding: var(--space-8) var(--space-6);
+}
+
+.home__container {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+}
+
+/* ============================================
+   Home Header / Hero
+   ============================================ */
+
+.home__hero {
+  text-align: center;
+  padding: var(--space-12) 0;
+  margin-bottom: var(--space-8);
+}
+
+.home__title {
+  font-family: var(--font-display);
+  font-size: var(--text-4xl);
+  font-weight: var(--font-bold);
+  color: var(--color-primary);
+  margin-bottom: var(--space-4);
+  letter-spacing: var(--tracking-tight);
+}
+
+.home__subtitle {
+  font-size: var(--text-lg);
+  color: var(--color-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ============================================
+   Section Headers
+   ============================================ */
+
+.home__section {
+  margin-bottom: var(--space-12);
+}
+
+.home__section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-6);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.home__section-title {
+  font-family: var(--font-body);
+  font-size: var(--text-xl);
+  font-weight: var(--font-semibold);
+  color: var(--color-primary);
+  position: relative;
+  padding-left: var(--space-4);
+}
+
+.home__section-title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 100%;
+  background-color: var(--color-primary);
+  border-radius: var(--radius-full);
+}
+
+/* ============================================
+   User Card Grid
+   ============================================ */
+
+.user-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-6);
+}
+
+/* ============================================
+   User Card
+   ============================================ */
+
+.user-card {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  text-align: center;
+  border: 1px solid var(--color-border-light);
+  transition: all var(--transition-base);
+  cursor: pointer;
+}
+
+.user-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: transparent;
+}
+
+.user-card__image-wrapper {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto var(--space-5);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  border: 3px solid var(--color-border-light);
+  transition: border-color var(--transition-fast);
+}
+
+.user-card:hover .user-card__image-wrapper {
+  border-color: var(--color-accent);
+}
+
+.user-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.user-card__name {
+  font-family: var(--font-body);
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  color: var(--color-primary);
+  margin-bottom: var(--space-2);
+}
+
+.user-card__title {
+  font-size: var(--text-sm);
+  color: var(--color-secondary);
+  margin-bottom: var(--space-3);
+}
+
+.user-card__bio {
+  font-size: var(--text-sm);
+  color: var(--color-tertiary);
+  line-height: var(--leading-relaxed);
+}
+
+/* ============================================
+   Loading & Empty States
+   ============================================ */
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-12) 0;
+}
+
+.loading-spinner__icon {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--color-border);
+  border-top-color: var(--color-accent);
+  border-radius: var(--radius-full);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-text {
+  text-align: center;
+  color: var(--color-tertiary);
+  font-size: var(--text-sm);
+  padding: var(--space-4) 0;
+}
+
+.empty-state {
+  text-align: center;
+  padding: var(--space-16) var(--space-8);
+}
+
+.empty-state__icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto var(--space-4);
+  color: var(--color-border);
+}
+
+.empty-state__text {
+  font-size: var(--text-lg);
+  color: var(--color-tertiary);
+}
+
+/* ============================================
+   Infinite Scroll End Message
+   ============================================ */
+
+.scroll-end {
+  text-align: center;
+  padding: var(--space-8) 0;
+  color: var(--color-tertiary);
+  font-size: var(--text-sm);
+}
+
+.scroll-end::before {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 1px;
+  background-color: var(--color-border);
+  margin: 0 auto var(--space-4);
+}
+
+/* ============================================
+   Responsive Styles
+   ============================================ */
+
+@media (max-width: 1024px) {
+  .user-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: var(--space-4);
+  }
+}
+
+@media (max-width: 768px) {
+  .home {
+    padding: var(--space-6) var(--space-4);
+  }
+
+  .home__hero {
+    padding: var(--space-8) 0;
+  }
+
+  .home__title {
+    font-size: var(--text-3xl);
+  }
+
+  .user-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .user-card {
+    padding: var(--space-6);
+  }
+
+  .user-card__image-wrapper {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .user-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  .home__section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
+  }
+}

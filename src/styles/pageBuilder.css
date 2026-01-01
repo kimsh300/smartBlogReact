@@ -1,0 +1,329 @@
+/* ============================================
+   Page Builder Styles
+   웹빌더 스타일 페이지 에디터
+   ============================================ */
+
+/* ============================================
+   Builder Container
+   ============================================ */
+
+.page-builder {
+  min-height: calc(100vh - var(--header-height));
+  display: flex;
+  flex-direction: column;
+}
+
+.page-builder__toolbar {
+  position: sticky;
+  top: var(--header-height);
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-4) var(--space-6);
+  z-index: var(--z-sticky);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.page-builder__toolbar-left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.page-builder__toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.page-builder__canvas {
+  flex: 1;
+  padding: var(--space-6);
+  background-color: var(--color-background-alt);
+}
+
+/* ============================================
+   Section Editor
+   ============================================ */
+
+.section-editor {
+  background-color: var(--color-surface);
+  border: 2px dashed var(--color-border);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-4);
+  transition: border-color var(--transition-fast);
+  position: relative;
+}
+
+.section-editor:hover {
+  border-color: var(--color-accent);
+}
+
+.section-editor--active {
+  border-color: var(--color-accent);
+  border-style: solid;
+}
+
+.section-editor__controls {
+  position: absolute;
+  top: var(--space-2);
+  right: var(--space-2);
+  display: flex;
+  gap: var(--space-1);
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.section-editor:hover .section-editor__controls {
+  opacity: 1;
+}
+
+.section-editor__control-btn {
+  padding: var(--space-2);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-secondary);
+  transition: all var(--transition-fast);
+}
+
+.section-editor__control-btn:hover {
+  background-color: var(--color-background-alt);
+  color: var(--color-primary);
+}
+
+.section-editor__control-btn--delete:hover {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: var(--color-error);
+  border-color: var(--color-error);
+}
+
+/* ============================================
+   Layout Selector
+   ============================================ */
+
+.layout-selector {
+  display: flex;
+  gap: var(--space-3);
+  padding: var(--space-4);
+}
+
+.layout-selector__option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.layout-selector__option:hover {
+  border-color: var(--color-secondary);
+}
+
+.layout-selector__option--selected {
+  border-color: var(--color-accent);
+  background-color: rgba(37, 99, 235, 0.05);
+}
+
+.layout-selector__preview {
+  width: 60px;
+  height: 40px;
+  display: flex;
+  gap: 2px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.layout-selector__preview-block {
+  background-color: var(--color-background-alt);
+  flex: 1;
+}
+
+/* Layout 1:2 preview */
+.layout-selector__preview--1-2 .layout-selector__preview-block:first-child {
+  flex: 1;
+}
+
+.layout-selector__preview--1-2 .layout-selector__preview-block:last-child {
+  flex: 2;
+}
+
+/* Layout 2:1 preview */
+.layout-selector__preview--2-1 .layout-selector__preview-block:first-child {
+  flex: 2;
+}
+
+.layout-selector__preview--2-1 .layout-selector__preview-block:last-child {
+  flex: 1;
+}
+
+.layout-selector__label {
+  font-size: var(--text-xs);
+  color: var(--color-secondary);
+}
+
+/* ============================================
+   Block Editor
+   ============================================ */
+
+.block-editor {
+  min-height: 200px;
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px dashed var(--color-border-light);
+  border-radius: var(--radius-md);
+  margin: var(--space-2);
+  transition: all var(--transition-fast);
+}
+
+.block-editor:hover {
+  border-color: var(--color-border);
+  background-color: var(--color-background-alt);
+}
+
+.block-editor--empty {
+  cursor: pointer;
+}
+
+.block-editor__placeholder {
+  text-align: center;
+  color: var(--color-tertiary);
+}
+
+.block-editor__placeholder-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: var(--space-3);
+  color: var(--color-border);
+}
+
+.block-editor__placeholder-text {
+  font-size: var(--text-sm);
+}
+
+/* ============================================
+   Content Type Selector
+   ============================================ */
+
+.content-type-selector {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+  padding: var(--space-4);
+}
+
+.content-type-selector__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.content-type-selector__item:hover {
+  border-color: var(--color-accent);
+  background-color: rgba(37, 99, 235, 0.05);
+}
+
+.content-type-selector__icon {
+  width: 32px;
+  height: 32px;
+  color: var(--color-secondary);
+}
+
+.content-type-selector__label {
+  font-size: var(--text-xs);
+  color: var(--color-secondary);
+  text-align: center;
+}
+
+/* ============================================
+   Add Section Button
+   ============================================ */
+
+.add-section-btn {
+  width: 100%;
+  padding: var(--space-6);
+  border: 2px dashed var(--color-border);
+  border-radius: var(--radius-lg);
+  background-color: transparent;
+  color: var(--color-tertiary);
+  font-size: var(--text-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  transition: all var(--transition-fast);
+}
+
+.add-section-btn:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  background-color: rgba(37, 99, 235, 0.05);
+}
+
+.add-section-btn__icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* ============================================
+   Preview Mode
+   ============================================ */
+
+.preview-mode {
+  background-color: var(--color-background);
+}
+
+.preview-mode .section-editor {
+  border: none;
+}
+
+.preview-mode .section-editor__controls {
+  display: none;
+}
+
+.preview-mode .block-editor {
+  border: none;
+  background-color: transparent;
+}
+
+/* ============================================
+   Responsive Styles
+   ============================================ */
+
+@media (max-width: 768px) {
+  .page-builder__toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .layout-selector {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .content-type-selector {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .content-type-selector {
+    grid-template-columns: 1fr;
+  }
+}

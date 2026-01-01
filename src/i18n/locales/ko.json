@@ -1,0 +1,93 @@
+{
+  "common": {
+    "home": "홈",
+    "login": "로그인",
+    "logout": "로그아웃",
+    "signup": "회원가입",
+    "search": "검색",
+    "searchUsers": "사용자 찾기",
+    "searchPlaceholder": "이름 또는 직무로 검색...",
+    "loading": "로딩 중...",
+    "loadMore": "더 보기",
+    "noResults": "검색 결과가 없습니다",
+    "error": "오류가 발생했습니다",
+    "save": "저장",
+    "cancel": "취소",
+    "edit": "수정",
+    "delete": "삭제",
+    "confirm": "확인",
+    "back": "뒤로",
+    "next": "다음",
+    "previous": "이전"
+  },
+  "nav": {
+    "home": "홈",
+    "about": "소개",
+    "techSkills": "기술 스택",
+    "project": "프로젝트",
+    "experience": "경력",
+    "career": "커리어",
+    "education": "학력",
+    "blog": "블로그",
+    "contact": "연락처"
+  },
+  "home": {
+    "title": "포트폴리오 빌더",
+    "subtitle": "당신의 이야기를 담은 포트폴리오를 만들어보세요",
+    "featuredUsers": "추천 포트폴리오",
+    "recentUsers": "최근 등록된 포트폴리오",
+    "viewProfile": "프로필 보기",
+    "createPortfolio": "포트폴리오 만들기"
+  },
+  "profile": {
+    "title": "프로필",
+    "followers": "팔로워",
+    "following": "팔로잉",
+    "portfolio": "포트폴리오",
+    "viewFullProfile": "전체 프로필 보기"
+  },
+  "pageBuilder": {
+    "title": "페이지 빌더",
+    "addSection": "섹션 추가",
+    "editSection": "섹션 편집",
+    "deleteSection": "섹션 삭제",
+    "layout": {
+      "fullWidth": "전체 너비 (1:1)",
+      "leftWide": "좌측 넓게 (2:1)",
+      "rightWide": "우측 넓게 (1:2)",
+      "twoColumn": "2단 분할 (2:2)"
+    },
+    "contentTypes": {
+      "text": "텍스트",
+      "image": "이미지",
+      "profile": "프로필",
+      "experience": "경력",
+      "skills": "기술",
+      "project": "프로젝트",
+      "education": "학력",
+      "contact": "연락처",
+      "custom": "커스텀"
+    }
+  },
+  "footer": {
+    "copyright": "© 2024 Portfolio Builder. All rights reserved.",
+    "terms": "이용약관",
+    "privacy": "개인정보처리방침",
+    "contact": "문의하기"
+  },
+  "auth": {
+    "loginTitle": "로그인",
+    "signupTitle": "회원가입",
+    "email": "이메일",
+    "password": "비밀번호",
+    "confirmPassword": "비밀번호 확인",
+    "rememberMe": "로그인 상태 유지",
+    "forgotPassword": "비밀번호를 잊으셨나요?",
+    "noAccount": "계정이 없으신가요?",
+    "hasAccount": "이미 계정이 있으신가요?",
+    "loginButton": "로그인",
+    "signupButton": "가입하기",
+    "socialLogin": "소셜 로그인",
+    "or": "또는"
+  }
+}
